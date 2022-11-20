@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_app/config/http_clients/dio_interceptor.dart';
 
+import '../flavors.dart';
 import 'env/env.dart';
 
 ///
@@ -20,7 +21,9 @@ final dioProvider = Provider((ref) {
   );
 
   var dio = Dio(options);
-  dio.interceptors.add(DioInterceptor());
+  if (F.appFlavor == Flavor.local) {
+    dio.interceptors.add(DioInterceptor());
+  }
 
   return dio;
 });
