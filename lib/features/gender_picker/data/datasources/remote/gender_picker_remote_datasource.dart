@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:test_app/config/logger/logger.dart';
-import 'package:test_app/features/gender_picker/domain/entities/gender_response.dart';
+import 'package:gender_picker/config/logger/logger.dart';
+import 'package:gender_picker/features/gender_picker/domain/entities/gender_response.dart';
 
 import '../../../../core/error/exception.dart';
 import '../../models/gender_response_model.dart';

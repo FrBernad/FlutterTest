@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/features/gender_picker/providers.dart';
+import 'package:gender_picker/features/gender_picker/providers.dart';
 
 import '../../domain/values/person_name.dart';
 
@@ -52,9 +52,7 @@ class _DepartmentCreateFormState extends ConsumerState<GenderPicker> {
               onPressed: isLoading
                   ? null
                   : () {
-                      if (!_formKey.currentState!.validate()) {
-                        return;
-                      }
+                      if (!_formKey.currentState!.validate()) return;
 
                       if (_name == null) return;
 

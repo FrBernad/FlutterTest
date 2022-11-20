@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'config/router.dart';
 import 'flavors.dart';
+import 'l10n/app_localizations.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -11,6 +12,8 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       title: F.title,
       routerConfig: router,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }

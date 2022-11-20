@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/config/logger/logger.dart';
+import 'package:gender_picker/config/logger/logger.dart';
 
 import 'config/providers.dart' as providers;
 import 'flavors.dart';

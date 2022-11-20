@@ -1,5 +1,5 @@
+import 'package:gender_picker/features/gender_picker/presentation/screens/gender_picker_screen.dart';
 import 'package:go_router/go_router.dart';
-import 'package:test_app/features/gender_picker/presentation/screens/gender_picker_screen.dart';
 
 class GenderPickerRouter {
   GenderPickerRouter._();

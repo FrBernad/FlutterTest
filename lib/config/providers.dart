@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/config/http_clients/dio_interceptor.dart';
+import 'package:gender_picker/config/http_clients/dio_interceptor.dart';
 
 import '../flavors.dart';
 import 'env/env.dart';
