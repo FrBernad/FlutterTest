@@ -15,7 +15,7 @@ class GenderPickerResult extends ConsumerWidget {
     final gender = getGenderProvider.maybeWhen(
       data: (genderResponse) => genderResponse.fold(
         () => '',
-        (t) => t.gender ?? 'No gender',
+        (gp) => gp.gender ?? 'No gender',
       ),
       orElse: () => '',
     );

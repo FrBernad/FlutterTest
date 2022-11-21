@@ -4,6 +4,8 @@ import 'package:gender_picker/features/gender_picker/domain/entities/gender_resp
 import 'package:gender_picker/features/gender_picker/domain/repositories/gender_picker_repository.dart';
 import 'package:gender_picker/features/gender_picker/domain/values/person_name.dart';
 
+import '../../../core/error/exception.dart';
+
 class GetGenderFromNameUsecase
     extends StateNotifier<AsyncValue<Option<GenderResponse>>> {
   GetGenderFromNameUsecase({
@@ -16,7 +18,7 @@ class GetGenderFromNameUsecase
     state = const AsyncLoading();
 
     final genderEither = await genderPickerRepository.getGenderFromName(
-      name: name.value.getOrElse((_) => throw Exception()),
+      name: name.value.getOrElse((_) => throw UnreachableCodeException()),
     );
 
     state = genderEither.fold(

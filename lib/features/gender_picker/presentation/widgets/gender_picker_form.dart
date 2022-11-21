@@ -27,7 +27,7 @@ class _DepartmentCreateFormState extends ConsumerState<GenderPicker> {
 
     final isLoading = getGenderProvider.maybeWhen(
       loading: () => true,
-      data: (_) => getGenderProvider.isRefreshing,
+      data: (_) => getGenderProvider.isRefreshing, // TODO:
       orElse: () => false,
     );
 
@@ -52,9 +52,9 @@ class _DepartmentCreateFormState extends ConsumerState<GenderPicker> {
               onPressed: isLoading
                   ? null
                   : () {
-                      if (!_formKey.currentState!.validate()) return;
-
                       if (_name == null) return;
+
+                      if (!_formKey.currentState!.validate()) return;
 
                       ref.read(getGenderFromNameUsecaseProvider.notifier)(
                           name: _name!);

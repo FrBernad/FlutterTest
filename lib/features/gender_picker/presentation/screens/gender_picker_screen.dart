@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gender_picker/features/core/utils/extensions/build_context_extensions.dart';
 import 'package:gender_picker/features/gender_picker/presentation/widgets/gender_picker_form.dart';
 import 'package:gender_picker/flavors.dart';
 
 import '../widgets/gender_picker_result.dart';
 
-class GenderPickerScreen extends ConsumerWidget {
+class GenderPickerScreen extends StatelessWidget {
   const GenderPickerScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Title(

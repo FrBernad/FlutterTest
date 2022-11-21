@@ -5,9 +5,10 @@ class GenderPickerRouter {
   GenderPickerRouter._();
 
   static const route = "/";
+  static const name = "gender_picker";
 
   static final router = GoRoute(
-    name: route,
+    name: name,
     path: route,
     builder: (context, state) => const GenderPickerScreen(),
     routes: const [

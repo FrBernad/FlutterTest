@@ -33,10 +33,8 @@ final dioProvider = Provider((ref) {
 ///
 Future<void> initializeProviders(ProviderContainer container) async {
   /// Env
-  await dotenv.load(fileName: "lib/config/env/.env.production");
+  await dotenv.load(fileName: F.envFileName);
   container.read(envProvider); // read to initialize
-
-  /// Core
 
   /// Dio Setup
   container.read(dioProvider);

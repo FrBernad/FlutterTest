@@ -7,4 +7,3 @@ final router = GoRouter(
     GenderPickerRouter.router,
   ],
 );
-

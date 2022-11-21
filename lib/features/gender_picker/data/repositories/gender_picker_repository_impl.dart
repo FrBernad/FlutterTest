@@ -7,15 +7,16 @@ import '../../../core/error/exception.dart';
 import '../../../core/error/failure.dart';
 
 class GenderPickerRepositoryImpl implements GenderPickerRepository {
-  GenderPickerRepositoryImpl(
-      {required GenderPickerRemoteDatasource remoteDatasource})
-      : _remoteDatasource = remoteDatasource;
+  GenderPickerRepositoryImpl({
+    required GenderPickerRemoteDatasource remoteDatasource,
+  }) : _remoteDatasource = remoteDatasource;
 
   final GenderPickerRemoteDatasource _remoteDatasource;
 
   @override
-  Future<Either<Failure, GenderResponse>> getGenderFromName(
-      {required String name}) async {
+  Future<Either<Failure, GenderResponse>> getGenderFromName({
+    required String name,
+  }) async {
     try {
       final genderResponse =
           await _remoteDatasource.getGenderFromName(name: name);
