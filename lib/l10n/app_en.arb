@@ -1,6 +1,25 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-      "description": "The conventional newborn programmer greeting"
+    "@@locale" : "en",
+
+    "homeTabLabel": "Home",
+    "@homeTabLabel": {
+      "description": "The label for the home bottom navigation tab"
+    },
+    "homeWelcome": "Welcome!",
+    "@homeWelcome": {
+      "description": "The welcome message for the home tab"
+    },
+
+    "pickerLabel": "Picker",
+    "@pickerLabel": {
+      "description": "The label for the picker bottom navigation tab"
+    },
+    "pickerNamePlaceholder": "Your name",
+    "@pickerNamePlaceholder": {
+      "description": "The name placeholder for the picker"
+    },
+    "pickerGetGenderBtn": "Get Gender",
+    "@pickerGetGenderBtn": {
+      "description": "The get gender button content"
     }
 }

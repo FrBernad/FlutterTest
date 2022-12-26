@@ -27,7 +27,7 @@ final genderPickerRepositoryProvider = Provider(
 /// Application dependencies
 ///
 
-final getGenderFromNameUsecaseProvider = StateNotifierProvider<
+final getGenderFromNameUsecaseProvider = StateNotifierProvider.autoDispose<
     GetGenderFromNameUsecase, AsyncValue<Option<GenderResponse>>>(
   (ref) => GetGenderFromNameUsecase(
     genderPickerRepository: ref.watch(genderPickerRepositoryProvider),

@@ -1,3 +1,10 @@
 {
-    "helloWorld": "¡Hola Mundo!"
+    "@@locale" : "es",
+
+    "homeTabLabel": "Inicio",
+    "homeWelcome": "Bienvenido!",
+
+    "pickerLabel": "Detector",
+    "pickerNamePlaceholder": "Tu nombre",
+    "pickerGetGenderBtn": "Detectar Género"
 }
